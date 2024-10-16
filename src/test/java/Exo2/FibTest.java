@@ -4,6 +4,10 @@ import static org.junit.Assert.*;
 
 import org.example.Exo2.Fib;
 import org.junit.Test;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 public class FibTest {
@@ -58,12 +62,14 @@ public class FibTest {
         assertEquals(expected, result);
     }
 
+
     @Test
     public void testGetFibSeries_Range6_SortedOrder() {
         Fib fib = new Fib(6);
         List<Integer> result = fib.getFibSeries();
-        for (int i = 0; i < result.size() - 1; i++) {
-            assertTrue(result.get(i) <= result.get(i + 1));
-        }
+        Integer[] resultArray = result.toArray(new Integer[0]);
+        Integer[] sortedArray = result.toArray(new Integer[0]);
+        Arrays.sort(sortedArray);
+        assertArrayEquals(sortedArray, resultArray);
     }
 }
