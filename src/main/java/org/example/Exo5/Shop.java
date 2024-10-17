@@ -1,4 +1,6 @@
-package Exo5;
+package org.example.Exo5;
+
+import org.example.Exo5.Product;
 
 import java.util.List;
 

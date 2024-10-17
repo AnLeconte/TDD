@@ -1,4 +1,4 @@
-package Exo5;
+package org.example.Exo5;
 
 import java.util.List;
 
